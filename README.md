@@ -1,4 +1,4 @@
-# 💻 DevOps Lab Portfolio by [Michael Olowoniran]
+# 💻 DevOps Lab Portfolio by Michael Olowoniran.
 
 Welcome to my hands-on DevOps learning portfolio. This repository contains real projects, automation scripts, command-line practice, and issue resolutions that reflect my continuous journey toward becoming a skilled Cloud & DevOps Engineer.
 
