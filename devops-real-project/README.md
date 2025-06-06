@@ -21,12 +21,7 @@ This project provisions an Ubuntu virtual machine using Vagrant and installs a f
 - Configured virtual host for `wordpress.conf`
 - Final site served on: `http://192.168.56.33/wordpress`
 
-## 📷 Screenshots
 
-_Add screenshots of:_
-- Your VM terminal with successful provisioning
-- WordPress setup wizard in browser
-- Final installed WordPress homepage
 
 ## 🔗 Live Status
 
@@ -42,7 +37,6 @@ _Add screenshots of:_
 - Real-world debugging of WordPress connection issues  
 - Confidence deploying infrastructure with repeatable steps
 
----
 
 ## 🚀 Ready to Build More
 
