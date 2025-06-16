@@ -1,0 +1,28 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/focal64"
+
+  # Networking
+  config.vm.network "private_network", ip: "192.168.56.33"
+
+  # VM resources
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1600"
+    vb.cpus = 2
+  end
+
+  # LAMP + WordPress setup
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update -y
+    apt-get install -y apache2 ghostscript libapache2-mod-php mysql-server php php-bcmath php-curl php-imagick php-intl php-json php-mbstring php-mysql php-xml php-zip wget tar unzip
+
+    systemctl enable apache2
+    systemctl enable mysql
+    systemctl start apache2
+    systemctl start mysql
+
+    mkdir -p /srv/www
+    chown www-data: /srv/www
+    curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
+  SHELL
+end
+
